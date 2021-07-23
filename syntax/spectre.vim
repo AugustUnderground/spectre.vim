@@ -16,10 +16,20 @@ syn case ignore
 syn keyword spectreTodo contained TODO FIXME
 syn keyword spectreNote contained NOTE IMPORTANT
 
-"" Statements
-syn keyword spectreStatement ac alter check dc envlp info montecarlo 
-                           \ noise options pac pdisto pnoise psp pss pxf qpac
-                           \ qpnoise qpss qpxf set shell sp sweep tdr tran xf
+"" Analysis
+syn keyword spectreSpecial ac dc dcmatch stb tran noise xf spectre
+
+"" Options
+syn keyword spectreMacro all lang type reltol vabstol iabstol temp tnom
+                       \ homotopy gmin rforce m w l ad as pd ps nrd nrs par1
+                       \ area peri n1 position gain rise delay ampl mag dev
+                       \ param value period mth method nsigma variations where
+                       \ start stop separatenoise errpreset lin dec freq r c
+
+"" Functions
+syn keyword spectreStatement alter check envlp info montecarlo 
+                           \ options pac pdisto pnoise psp pss pxf qpac
+                           \ qpnoise qpss qpxf set shell sp sweep tdr 
                            \ include section simulatorOptions modelParameter
                            \ element outputParameter saveOptions simultor abs
                            \ acos acosh altergroup asin asinh atan atan2 atanh
@@ -30,10 +40,10 @@ syn keyword spectreStatement ac alter check dc envlp info montecarlo
                            \ real return save sens simulator sin sinh sqrt
                            \ statistics subckt tan tanh to truncate vary
 
-"" Keywords
+"" Devices and Sources
 syn keyword spectreKeyword model a2d b3soipd bjt bjt301 bjt500 bjt503 bsim1
                          \ bsim2 bsim3 bsim3v3 btasoi capacitor cccs ccvs
-                         \ cktrom core cpp d2a delay dio500 diode ekv fourier 
+                         \ cktrom core cpp d2a dcfeed dio500 diode ekv fourier 
                          \ gaas hbt hvmos inductor intcap iprobe isource jfet
                          \ juncap misnan mos0 mos1 mos15 mos2 mos3 mos30
                          \ mos3002 mos705 mos902 mos903 msline mutual_inductor
@@ -87,12 +97,14 @@ hi default link spectreSinglequote      spectreExpr
 hi default link spectreExpr             Type
 hi default link spectreParenError       Error
 hi default link spectreCommentError     Error
+hi default link spectreSpecial          Special
 hi default link spectreStatement        Statement
+hi default link spectreMacro            Macro
 hi default link spectreNumber           Number
 hi default link spectreComment          Comment
 hi default link spectreOperator         Operator
 hi default link spectreString           String
-hi default link spectreKeyword          Function 
+hi default link spectreKeyword          Function
 hi default link spectreIgnore           Ignore
 
 let b:current_syntax = "spectre"
