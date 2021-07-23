@@ -16,8 +16,9 @@ syn case ignore
 syn keyword spectreTodo contained TODO FIXME
 syn keyword spectreNote contained NOTE IMPORTANT
 
-"" Analysis
-syn keyword spectreSpecial ac dc dcmatch stb tran noise xf spectre
+"" Analysis and Special keywords
+syn keyword spectreSpecial ac dc dcmatch stb tran noise xf 
+                         \ spectre nutbin nutascii
 
 "" Options
 syn keyword spectreMacro all lang type reltol vabstol iabstol temp tnom
@@ -25,6 +26,7 @@ syn keyword spectreMacro all lang type reltol vabstol iabstol temp tnom
                        \ area peri n1 position gain rise delay ampl mag dev
                        \ param value period mth method nsigma variations where
                        \ start stop separatenoise errpreset lin dec freq r c
+                       \ rawfmt
 
 "" Functions
 syn keyword spectreStatement alter check envlp info montecarlo 
