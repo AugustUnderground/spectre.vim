@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:     Spectre circuit simulator input netlist
-" Maintainer:   Yannick Uhlmann, Forked from Ahmed Nabil 
+" Maintainer:   Yannick Uhlmann (https://github.com/augustunderground)
 " Last Change:  23-07-2021
 " Comments:     Spectre is an advanced circuit simulator from Cadence Design
 "               Systems that simulates analog and digital circuits at the
